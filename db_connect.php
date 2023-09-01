@@ -12,7 +12,6 @@ $conn = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
 if ($conn->connect_error){
     die("Connection failed: ". $conn->connect_error);
 }
-echo "Connected successfully <br>";
 
 //sql to create table
 // $sql = "CREATE TABLE list_menu (

@@ -2,19 +2,18 @@
 session_start();
 include_once 'db_connect.php';
 
-echo "<pre>";
-print_r($_POST,);
-print_r($_FILES);
-echo "</pre>";
+// echo "<pre>";
+// print_r($_POST,);
+// print_r($_FILES);
+// echo "</pre>";
+
+// File upload path
+$targetDir = "upload_imgs/";
 
 $name   = $_POST["name"];
 $type   = $_POST["type"];
 $prices = $_POST["prices"];
 $about  = $_POST["about"];
-
-// File upload path
-$targetDir = "upload_imgs/";
-
 // เช็คว่ามีไฟล์ที่ถูกเลือกอัปโหลดมาหรือไม่
 if (!empty($_FILES["file"]["name"])) {
     // ดึงชื่อไฟล์จากข้อมูลที่ถูกส่งมา
@@ -45,24 +44,24 @@ if (!empty($_FILES["file"]["name"])) {
             } else {
                 // ถ้าเพิ่มข้อมูลลงในฐานข้อมูลไม่สำเร็จ
                 // กำหนดข้อความสถานะและเปลี่ยนเส้นทางไปยังหน้า "add_menu.php"
-                $_SESSION['statusMsg'] = "Your upload failed, please try again. Error: " . $conn->error;
+                $_SESSION['statusMsg'] = "Your upload failed, please try again. Error: ";
                 header("location: add_menu.php");
             }
         } else {
             // ถ้าเกิดข้อผิดพลาดในขั้นตอนการย้ายไฟล์
-            // กำหนดข้อความสถานะและเปลี่ยนเส้นทางไปยังหน้า "index.php"
+            // กำหนดข้อความสถานะและเปลี่ยนเส้นทางไปยังหน้า "add_menu.php"
             $_SESSION['statusMsg'] = "Sorry, there was an error uploading your picture file.";
             header("location: add_menu.php");
         }
     } else {
         // ถ้านามสกุลของไฟล์ไม่อยู่ในรายชื่อที่อนุญาต
-        // กำหนดข้อความสถานะและเปลี่ยนเส้นทางไปยังหน้า "index.php"
+        // กำหนดข้อความสถานะและเปลี่ยนเส้นทางไปยังหน้า "add_menu.php"
         $_SESSION['statusMsg'] = "Sorry, only JPG, JPEG and PNG files are allowed to upload.";
         header("location: add_menu.php");
     }
 } else {
     // ถ้าไม่มีไฟล์ที่ถูกเลือกอัปโหลดมา
-    // กำหนดข้อความสถานะและเปลี่ยนเส้นทางไปยังหน้า "index.php"
+    // กำหนดข้อความสถานะและเปลี่ยนเส้นทางไปยังหน้า "add_menu.php"
     $_SESSION['statusMsg'] = "Please select a file to upload.";
     header("location: add_menu.php");
 }
