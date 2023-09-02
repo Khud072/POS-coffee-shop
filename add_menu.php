@@ -18,35 +18,9 @@ $statusMsg = "";
     <!-- Import Google font -->
     <link rel="stylesheet" href="https://fonts.google.com" type="text/css">
 
-    <!-- Style of css -->
-    <style>
-        :root {
-            --blue-color: #143649;
-        }
-
-        body {
-            background-color: #143649;
-            background: var(--blue-color);
-        }
-
-        .card {
-            background-color: #fad02c;
-            border-radius: 4%;
-            box-shadow: 0 -2px 5px #ffffff, 0 5px 5px #ffffff;
-        }
-
-        .block1,
-        .block5 {
-            padding-top: 20px;
-        }
-
-        h6 {
-            font-family: Bebas Neue;
-        }
-
-        .sub-header {
-            font-weight: bold;
-        }
+    <!-- CSS style -->
+    <link rel="stylesheet" href="css/style.css">
+        
     </style>
 
     <!-- Javascript vilidation -->
@@ -73,7 +47,7 @@ $statusMsg = "";
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center">
-                            <div class="card mb-3 card-body">
+                            <div class="card mb-3 card-body card-add-menu">
 
                                 <div>
                                     <div class="d-flex justify-content-center">
@@ -81,7 +55,7 @@ $statusMsg = "";
                                             <img src="web_imgs/coffee_logo.png" alt="Logo" width="120" height="120">
                                         </a>
                                     </div>
-                                    <h6 class="card-title text-center fs-1">NEW MENU</h6>
+                                    <h6 class="card-title text-center fs-1 head-menu">NEW MENU</h6>
                                     <p class="text-center small fs-5">Create your new menu to in font of cafe</p>
                                 </div>
                                 
