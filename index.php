@@ -16,14 +16,16 @@
 
 <body>
     <header>
-        <nav class="navbar fixed-top">
-            <div class="container-fluid">
-                <img src="web_imgs/white_coffee_logo.png" class="img-fluid rounded-start" alt="" width="100" height="100">
-            </div>
+        <nav class="navbar navbar-expand-sm fixed-top" style="background-color: #265c7b">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <img src="web_imgs/white_coffee_logo.png" class="img-fluid rounded-start" alt="Logo" width="100">
+                </li>
+            </ul>
         </nav>
     </header>
     <main>
-        <form action="home.php" method="post">
+        <form action="home.php" method="POST">
             <section class="section1">
                 <div class="row gy-4">
                     <div class="col-xs-6">
@@ -187,7 +189,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <button type="submit" name="submit" value="8" class="button-table btn btn-warning">ORDER</button>
+                                        <button type="submit" name="submit" value="8" class="button-table btn btn-warning">SELECT</button>
                                     </div>
                                 </div>
 

@@ -10,6 +10,7 @@ $statusMsg = "";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
 
     <!-- Import Bootstap5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
@@ -36,8 +37,6 @@ $statusMsg = "";
             }
         }
     </script>
-
-    <title>Add your menu</title>
 </head>
 
 <body>
@@ -67,7 +66,6 @@ $statusMsg = "";
                                             <div class="invalid-feedback">Please, enter the name!</div>
                                             <select class="form-select" id="type" name="type">
                                                 <option value="coffee">Coffee</option>
-                                                <option value="mocktial">Mocktial</option>
                                                 <option value="smoothie">Smoothie</option>
                                                 <option value="soda">Soda</option>
                                                 <option value="tea">Tea</option>
